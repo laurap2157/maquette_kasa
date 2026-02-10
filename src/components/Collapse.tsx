@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 
 interface CollapseProps {
   title: string;
@@ -10,11 +11,9 @@ function Collapse({ title, content }: CollapseProps) {
 
     return (
     <div className="mb-5">
-        <button onClick={() => setIsOpen(!isOpen)} className="w-full bg-[#ff6060] text-white px-5 py-3 rounded-[5px] flex justify-between items-center font-montserrat">
+        <button onClick={() => setIsOpen(!isOpen)} className="w-full bg-[#ff6060] text-white px-5 py-3 rounded-[5px] flex justify-between items-center">
         <span className="font-bold text-2xl">{title}</span>
-            <svg className={`w-6 h-6 transform transition-transform ${isOpen ? '' : 'rotate-180'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
+        <ChevronDown size={40} strokeWidth={2} className={`transform transition-transform ${isOpen ? '' : 'rotate-180'}`}/>
         </button>
       {isOpen && (
         <div className="bg-gray-100 px-5 py-6 rounded-b-[5px]">
