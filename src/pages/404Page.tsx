@@ -1,11 +1,11 @@
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function Page404 () {
     return (
-        <div className="flex justify-center items-center">
-        <span className="w-149.25 h-65.75 text-[#ff6060]">404</span>
-        <p className="text-[#ff6060] w-218 h-12.75">Oups ! La page que vous demandez n'existe pas</p>
-        <NavLink to={"AccueilPage"} className='active:underline [&.active]:underline'>Retourner sur la page d'accueil</NavLink>
+        <div className="flex flex-col justify-center items-center">
+        <span className="text-9xl font-bold text-[#ff6060] p-20">404</span>
+        <p className="text-[#ff6060] font-medium text-4xl p-20">Oups ! La page que vous demandez n'existe pas.</p>
+        <Link to={"/AccueilPage"} className='underline p-20'>Retourner sur la page d'accueil</Link>
         </div>
     )
 }
