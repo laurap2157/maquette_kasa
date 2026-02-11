@@ -22,14 +22,14 @@ function Slideshow({ pictures }: SlideshowProps) {
 
   if (pictures.length === 1) {
     return (
-      <div className="relative w-[90vw] h-103.75 rounded-[25px] overflow-hidden mx-auto my-6">
+      <div className="relative rounded-[25px] overflow-hidden mx-auto my-6 h-100 md:h-140">
         <img src={pictures[0]} alt="Logement" className="w-full h-full object-cover"/>
       </div>
     );
   }
 
   return (
-    <div className="relative w-[90vw] h-103.75 rounded-[25px] overflow-hidden mx-auto my-6">
+    <div className="relative rounded-[25px] overflow-hidden mx-auto my-6 h-100 md:h-140">
       <img src={pictures[currentIndex]} alt={`Logement ${currentIndex + 1}`}className="w-full h-full object-cover"/>
       <button onClick={prevSlide} className="absolute left-6 top-1/2 -translate-y-1/2 text-white hover:scale-110 transition-transform">
         <ChevronLeft size={48} strokeWidth={3} />

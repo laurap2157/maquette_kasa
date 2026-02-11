@@ -6,7 +6,7 @@ function Accueil () {
     return (
         <div>
         <Banner/>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 p-12 bg-gray-100 rounded-[25px] m-11.25 font-montserrat">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 p-8 md:p-12 md:bg-gray-100 rounded-[25px] md:m-11.25 font-montserrat">
             {logements.map((logement) => (
                 <Card 
                 key={logement.id}

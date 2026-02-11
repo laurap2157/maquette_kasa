@@ -21,9 +21,9 @@ function APropos() {
   ];
 
   return (
-    <div className="flex flex-col justify-center items-center pb-2 pt-5">
-        <div className="flex justify-center items-center bg-[url('/apropos.jpg')] bg-cover bg-center bg-no-repeat w-[95vw] h-[30vh] top-40.75 left-25 rounded-3xl border bg-blend-darken bg-black/30 shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]"></div>
-        <div className="w-[80vw] mx-auto px-8 py-12">
+    <div className="flex flex-col justify-center items-center pt-5">
+        <div className="flex justify-center items-center bg-[url('/apropos.jpg')] bg-cover bg-center bg-no-repeat w-[90vw] h-[20vh] md:w-[95vw] md:h-[30vh] rounded-3xl border bg-blend-darken bg-black/30 md:shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] mt-2 md:mt-0"></div>
+        <div className="w-[98vw] md:w-[80vw] mx-auto pr-8 pl-8 pt-8 md:pb-4 md:p-12">
         {aboutData.map((item, index) => (
         <Collapse 
           key={index}
