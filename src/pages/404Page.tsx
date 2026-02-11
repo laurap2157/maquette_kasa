@@ -5,7 +5,7 @@ function Page404 () {
         <div className="flex flex-col justify-center items-center">
         <span className="text-9xl font-bold text-[#ff6060] p-20">404</span>
         <p className="text-[#ff6060] font-medium text-4xl p-20">Oups ! La page que vous demandez n'existe pas.</p>
-        <Link to={"/AccueilPage"} className='underline p-20'>Retourner sur la page d'accueil</Link>
+        <Link to={"/"} className='underline p-20'>Retourner sur la page d'accueil</Link>
         </div>
     )
 }

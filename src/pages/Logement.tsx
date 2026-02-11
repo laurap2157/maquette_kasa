@@ -2,14 +2,18 @@ import { useParams } from 'react-router-dom';
 import logements from '../data/logements.json';
 import Slideshow from '../components/Slideshow';
 import Collapse from '../components/Collapse';
+import { Star } from 'lucide-react';
+import { Navigate } from 'react-router-dom';
 
 function Logement() {
   const { id } = useParams();
   const logement = logements.find(log => log.id === id);
 
   if (!logement) {
-  return <div>Logement introuvable</div>;
+  return <div><Navigate to={"/404Page"}/></div>;
 }
+
+  const stars = [1, 2, 3, 4, 5];
   
   return (
     <div className='m-22 mt-5 mb-15'>
@@ -31,8 +35,11 @@ function Logement() {
             <span className='font-medium text-lg text-[#ff6060] p-3'>{logement.host.name}</span> 
             <img src={logement.host.picture} className='rounded-full w-16 h-16'></img>
           </div>
-          <div>{logement.rating}</div>  
-          {/* staractive à utiliser */}
+          <div className='flex gap-1 mt-4'>
+            {stars.map((index) => (
+              <span key={index}><Star className={index < Number(logement.rating) ? "text-[#ff6060]" : "text-gray-300"} fill="currentColor"/></span>
+            ))}
+          </div>  
         </div>
       </div>
       <div className='flex flex-row justify-between mt-5 gap-16'>
